@@ -1,9 +1,11 @@
 <html>
     <body>
         <ul>
-            <% messages.forEach((message) => { %>
-                <%- include('message', {message: message}); %>
+            <% messages.forEach((message, index) => { %>
+                <%- include('message', {message: message, index: index}); %>
             <% }); %>
         </ul>
+
+        <a href="/new">Add message</a>
     </body>
 </html>
