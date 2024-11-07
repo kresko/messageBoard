@@ -11,6 +11,7 @@ body {
 }
 
 .message-board,
+.message-details,
 form {
     display: inherit;
     flex-direction: column;
@@ -24,12 +25,10 @@ form {
 .message-board ul,
 .message-container,
 .message-board a,
-.message-details .message-details-block p {
+.message-details .message-details-block p,
+form h1,
+form input {
     margin-bottom: 10px;
-}
-
-.message-board h1 {
-
 }
 
 .message-board ul {
@@ -37,7 +36,8 @@ form {
 }
 
 .message-board ul .message-container,
-.message-details .message-details-block {
+.message-details .message-details-block,
+form {
     padding: 10px;
     border: 1px solid lightgray;
     border-radius: 10px;
@@ -51,10 +51,24 @@ form {
 
 .message-board a button,
 .message-board ul .message-container a button,
-.message-details .message-details-block a button {
+.message-details .message-details-block a button,
+form button,
+form a button {
     padding: 5px 10px;
     color: white;
     background-color: #666;
     border: 1px solid #666;
     border-radius: 5px;
+}
+
+form button {
+    margin-top: 15px;
+}
+
+form a button {
+    width: 100%;
+}
+
+form input {
+    padding: 5px 10px;
 }
