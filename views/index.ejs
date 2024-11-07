@@ -1,11 +1,26 @@
-<html>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Message Board</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
     <body>
-        <ul>
-            <% messages.forEach((message, index) => { %>
-                <%- include('message', {message: message, index: index}); %>
-            <% }); %>
-        </ul>
+        <div class="message-board">
+            <h1>Message Board</h1>
 
-        <a href="/new">Add message</a>
+            <ul>
+                <% messages.forEach((message, index) => { %>
+                    <%- include('message', {message: message, index: index}); %>
+                <% }); %>
+            </ul>
+
+            <a href="/new">
+                <button>Add message</button>
+            </a>
+        </div>
     </body>
 </html>

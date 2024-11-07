@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    background: #efefef;
+}
+
+.message-board,
+form {
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+}
+
+.message-board h1,
+.message-details h1,
+.message-board ul,
+.message-container,
+.message-board a,
+.message-details .message-details-block p {
+    margin-bottom: 10px;
+}
+
+.message-board h1 {
+
+}
+
+.message-board ul {
+    list-style-type: none;
+}
+
+.message-board ul .message-container,
+.message-details .message-details-block {
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.message-board ul .message-container a,
+.message-details .message-details-block a {
+    display: block;
+    margin-top: 10px;
+}
+
+.message-board a button,
+.message-board ul .message-container a button,
+.message-details .message-details-block a button {
+    padding: 5px 10px;
+    color: white;
+    background-color: #666;
+    border: 1px solid #666;
+    border-radius: 5px;
+}

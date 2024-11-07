@@ -1,5 +1,17 @@
-<li><%= message.text %></li>
-<li><%= message.user %></li>
-<li><%= message.added %></li>
-<li><%= index %></li>
-<button>Open</button>
+<div class="message-container">
+    <li>
+        <%= message.text %>
+    </li>
+
+    <li>
+        <%= message.user %>
+    </li>
+
+    <li>
+        <%= message.added %>
+    </li>
+
+    <a href="/message/<%= index %>">
+        <button>Open</button>
+    </a>
+</div>

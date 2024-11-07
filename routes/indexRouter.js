@@ -18,6 +18,17 @@ indexRouter.get('/', (req, res) => {
     res.render('index', { messages: messages });
 });
 
+indexRouter.get('/message/:id', (req, res) => {
+    const messageId = req.params.id;
+    const message = messages[messageId];
+
+    if (message) {
+        res.render('messageDetails', { message });
+    } else {
+        res.status(404).render('Message not found!');
+    }
+});
+
 indexRouter.get('/new', (req, res) => {
     res.render('form');
 })
