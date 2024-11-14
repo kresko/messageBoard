@@ -13,9 +13,11 @@
         <h1>Message Details</h1>
 
         <div class="message-details-block">
-            <p><strong>Text:</strong> <%= message.text %></p>
-            <p><strong>User:</strong> <%= message.user %></p>
-            <p><strong>Date:</strong> <%= message.added %></p>
+            <% message.forEach((messageDetails) => { %>
+                <p><strong>Text:</strong> <%= messageDetails.message %></p>
+                <p><strong>User:</strong> <%= messageDetails.username %></p>
+                <p><strong>Date:</strong> <%= messageDetails.date %></p>
+            <% }); %>
 
             <a href="/"><button>Back to board</button></a>
         </div>
