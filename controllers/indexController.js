@@ -25,9 +25,15 @@ async function postNewMessage(req, res) {
     res.redirect('/');
 }
 
+async function deleteAllMessages(req, res) {
+    await db.deleteAllMessages();
+    res.redirect('/');
+}
+
 module.exports = {
     getAllMessages,
     getMessageById,
     renderNewMessageForm,
     postNewMessage,
+    deleteAllMessages,
 }
