@@ -13,15 +13,17 @@ CREATE TABLE IF NOT EXISTS messages (
 
 INSERT INTO messages (message, username, date) 
 VALUES
-  ('Test message 1', 'Edo', CURRENT_DATE),
-  ('Test message 2', 'Mona',CURRENT_DATE),
-  ('Test message 3', 'Poko',CURRENT_DATE);
+  ('Test message 1', 'Test User 1', CURRENT_DATE),
+  ('Test message 2', 'Test User 2',CURRENT_DATE),
+  ('Test message 3', 'Test User 3',CURRENT_DATE);
 `;
 
 async function main() {
     console.log("seeding...");
+    const dbUrl = `${process.env.DATABASE_URL}`;
+
     const client = new Client({
-        connectionString: process.env.CONNECTION_STRING,
+        connectionString: dbUrl,
     });
     await client.connect();
     await client.query(SQL);
