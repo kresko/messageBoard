@@ -14,7 +14,7 @@
 
             <ul>
                 <% messages.forEach((message, index) => { %>
-                    <%- include('message', {message: message, index: index}); %>
+                    <%- include('message', {message: message, index: index + 1 }); %>
                 <% }); %>
             </ul>
 
