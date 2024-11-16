@@ -17,7 +17,7 @@ async function postNewMessage(message, username) {
 }
 
 async function deleteAllMessages(req, res) {
-    await pool.query("DELETE FROM messages");
+    await pool.query("DELETE FROM messages; ALTER SEQUENCE public.messages_id_seq RESTART WITH 1;");
 }
 
 module.exports = {
